@@ -22,7 +22,7 @@ pipeline{
 			stage("Deployment"){
 				steps{
 					echo "deployment started"
-					deploy adapters: [tomcat9(credentialsId: 'tomcatcred',url: 'http://18.61.30.53:8080/')],contextPath: 'welcomeapp',war: '**/*.war
+					deploy adapters: [tomcat9(credentialsId: 'tomcatcred',url:'http://18.61.203.21:8080/')],contextPath: 'welcomeapp',war: '**/*.war
 					echo "Deployemnt completed"
 				}
 			}
